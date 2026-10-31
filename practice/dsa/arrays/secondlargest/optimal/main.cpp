@@ -4,6 +4,9 @@
 #include <vector>
 
 std::optional<int> findSecondLargest(std::vector<int> &arr) {
+  if (arr.size() < 2)
+    return std::nullopt;
+
   int largest = arr[0];
   int secondLargest = INT_MIN;
   bool foundSecond = false;
